@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOMAS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap" rel="stylesheet">
+    <style>
+        /* Custom font stretch/condense if needed, but scaling works too */
+        .base-text, .glow-text-stroke {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+            /* Stretch vertically: scale(1, 1.2) is one way, but font-stretch is better if font supports it. 
+               Since Inter doesn't have ultra-condensed/tall variants easily loaded here without variable font, 
+               we will rely on SVG transform or CSS transform on the text element */
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particles-canvas"></canvas>
+    
+    <main class="content">
+        <!-- SVG Container for the text -->
+        <svg id="text-svg" viewBox="0 0 800 200" preserveAspectRatio="xMidYMid meet">
+            <defs>
+                <!-- Mask for the glow effect -->
+                <mask id="glow-mask">
+                    <!-- Everything black is hidden, white is visible -->
+                    <rect x="0" y="0" width="100%" height="100%" fill="black" />
+                    <!-- The spotlight circle that will follow the mouse -->
+                    <circle id="glow-spotlight" cx="0" cy="0" r="60" fill="white" filter="url(#blur-filter)" />
+                </mask>
+                
+                <filter id="blur-filter">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+                </filter>
+            </defs>
+            
+            <!-- Group to center/scale text if needed -->
+            <!-- transform: scale(0.9, 1.2) compresses width slightly and stretches height -->
+            <g transform="scale(0.9, 1.2)" transform-origin="center">
+                <!-- Glow layer (White stroke, masked by the spotlight) -->
+                <!-- Rendered FIRST (behind) so inner strokes are covered by the base text -->
+                <text x="50%" y="50%" dy=".35em" text-anchor="middle" class="glow-text-stroke" mask="url(#glow-mask)" aria-hidden="true"><tspan>T</tspan>OMÁS</text>
+                
+                <!-- Base text (dark fill) -->
+                <!-- Rendered SECOND (front) to hide the messy inner strokes of the glow layer -->
+                <text x="50%" y="50%" dy=".35em" text-anchor="middle" class="base-text"><tspan id="secret-trigger">T</tspan>OMÁS</text>
+            </g>
+        </svg>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
