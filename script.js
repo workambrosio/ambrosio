@@ -9,7 +9,7 @@ function initSecretTrigger() {
     if (trigger) {
         trigger.addEventListener('click', (e) => {
             e.preventDefault(); // Prevent text selection or other defaults
-            window.location.href = 'reaction.html';
+            window.location.href = 'reaction/';
         });
     }
 }

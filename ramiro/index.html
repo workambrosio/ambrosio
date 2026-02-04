@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Ramiro - Cozinha Regional Portuguesa</title>
+    <meta name="description" content="Restaurante O Ramiro em Rio de Moinhos, Abrantes. Cozinha regional portuguesa de excelência, ambiente acolhedor e familiar.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">O Ramiro</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#specials">Pratos do Dia</a></li>
+                <li><a href="#story">Sobre Nós</a></li>
+                <li><a href="#menu">Ementa</a></li>
+                <li><a href="#reviews">Opiniões</a></li>
+                <li><a href="#contact" class="btn-nav">Reservar</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero-section">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <h1 class="fade-in">Cozinha Regional Portuguesa com Alma</h1>
+            <p class="fade-in delay-1">Rio de Moinhos, Abrantes</p>
+            <a href="#contact" class="btn-primary fade-in delay-2">Reservar Mesa</a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Descobrir</span>
+            <div class="arrow-down"></div>
+        </div>
+    </header>
+
+    <!-- Daily Specials Section -->
+    <section id="specials" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Hoje no Ramiro</h2>
+                <div class="divider"></div>
+            </div>
+            <div id="specials-container" class="specials-grid">
+                <!-- Content loaded via JS -->
+                <div class="loading">A carregar pratos do dia...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="section-padding bg-cream">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content" data-aos="fade-right">
+                    <h2>A Nossa História</h2>
+                    <p>O <strong>Restaurante O Ramiro</strong>, localizado em Rio de Moinhos, próximo de Abrantes, está vocacionado para a Cozinha Regional Portuguesa e dispõe de um espaço acolhedor e ambiente familiar.</p>
+                    <p>Possuímos um espaço com capacidade de <strong>180 lugares</strong>, perfeito para grupos e eventos.</p>
+                    <p>Apostamos na gastronomia típica portuguesa, cuja qualidade tem granjeado da parte dos nossos clientes imensos elogios. O serviço prestado pelo pessoal do restaurante é profissional, eficiente e muito cordial.</p>
+                    <p class="highlight-text">"A excelência dos nossos pratos é de fazer crescer água na boca. A satisfação é sempre garantida."</p>
+                </div>
+                <div class="story-images" data-aos="fade-left">
+                    <div class="img-wrapper main-img">
+                        <img src="Images/pessoas.jpg" alt="Equipa O Ramiro">
+                    </div>
+                    <div class="img-wrapper sub-img">
+                        <img src="Images/interior.jpg" alt="Interior do Restaurante">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>As Nossas Especialidades</h2>
+                <div class="divider"></div>
+                <p>Sabores autênticos da região</p>
+            </div>
+            
+            <div class="menu-categories">
+                <!-- Peixe -->
+                <div class="menu-category" data-aos="fade-up">
+                    <div class="category-image">
+                        <img src="Images/bacalhau.jpg" alt="Pratos de Peixe">
+                        <div class="overlay"><h3>Do Mar & Rio</h3></div>
+                    </div>
+                    <div class="category-items">
+                        <ul>
+                            <li>
+                                <span class="item-name">Bacalhau com Broa</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Polvo à Lagareiro</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Achigã na Brasa com Migas</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Sável Frito com Açorda de Ovas</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Arroz de Tamboril</span>
+                                <span class="item-dots"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Carne -->
+                <div class="menu-category reversed" data-aos="fade-up">
+                    <div class="category-image">
+                        <img src="Images/bife.jpg" alt="Pratos de Carne">
+                        <div class="overlay"><h3>Da Terra</h3></div>
+                    </div>
+                    <div class="category-items">
+                        <ul>
+                            <li>
+                                <span class="item-name">Cabrito Assado no Forno</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Migas com Lombo Grelhado</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Bifinhos com Camarão</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Medalhões de Vitela</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Secreto de Pata Negra</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Picanha</span>
+                                <span class="item-dots"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Sobremesas -->
+                <div class="menu-category" data-aos="fade-up">
+                    <div class="category-image">
+                        <img src="Images/cheesecake.jpg" alt="Sobremesas">
+                        <div class="overlay"><h3>Doce Final</h3></div>
+                    </div>
+                    <div class="category-items">
+                        <ul>
+                            <li>
+                                <span class="item-name">Cheesecake de Morango</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Quente e Frio de Maçã</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Pudim de Café</span>
+                                <span class="item-dots"></span>
+                            </li>
+                            <li>
+                                <span class="item-name">Maçã Dourada</span>
+                                <span class="item-dots"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section-padding bg-dark text-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>O Que Dizem de Nós</h2>
+                <div class="divider white"></div>
+            </div>
+            <div class="reviews-carousel-container">
+                <div class="reviews-track" id="reviews-track">
+                    <!-- Reviews injected via JS -->
+                </div>
+                <div class="carousel-controls">
+                    <button id="prev-review" aria-label="Anterior">&lt;</button>
+                    <button id="next-review" aria-label="Seguinte">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact">
+        <div class="footer-top section-padding">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-info">
+                        <h3>O Ramiro</h3>
+                        <p class="address">
+                            R. 1 de Maio Nr 5<br>
+                            2200-783 Abrantes<br>
+                            <small>GPS: 39.4770088, -8.2407814</small>
+                        </p>
+                        <div class="contacts">
+                            <p><a href="tel:+351241881263">241 881 263</a></p>
+                            <p><a href="mailto:restauranteramiro@gmail.com">restauranteramiro@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="footer-map">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=39.47700882719529,-8.240781430234067&hl=pt&z=15&output=embed" 
+                            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2023 Restaurante O Ramiro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+
+

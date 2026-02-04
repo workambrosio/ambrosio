@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cascata - Formulário de Serviço</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="page-container">
+        <div class="form-card">
+            <h1 class="form-title">Formulário de Serviço</h1>
+            
+            <form id="reserva-form" class="reserva-form">
+                <!-- Tipo de Serviço -->
+                <div class="form-row service-row">
+                    <label class="text-option">
+                        <input type="radio" name="tipo-servico" value="jardim" required>
+                        <span>Jardim da Cascata</span>
+                    </label>
+                    <label class="text-option">
+                        <input type="radio" name="tipo-servico" value="catering">
+                        <span>Cascata Catering</span>
+                    </label>
+                </div>
+                
+                <!-- Campo Local (condicional) -->
+                <div class="form-row conditional-field" id="local-group">
+                    <div class="input-group full-width">
+                        <input type="text" id="local" name="local" placeholder=" ">
+                        <label for="local">Local do Evento</label>
+                    </div>
+                </div>
+                
+                <!-- Tipo de Evento -->
+                <div class="form-row event-row">
+                    <label class="text-option">
+                        <input type="radio" name="tipo-evento" value="casamento" required>
+                        <span>Casamento</span>
+                    </label>
+                    <label class="text-option">
+                        <input type="radio" name="tipo-evento" value="batizado">
+                        <span>Batizado</span>
+                    </label>
+                    <label class="text-option">
+                        <input type="radio" name="tipo-evento" value="outro">
+                        <span>Outro</span>
+                    </label>
+                </div>
+                
+                <!-- Campo Outro (condicional) -->
+                <div class="form-row conditional-field" id="outro-group">
+                    <div class="input-group full-width">
+                        <input type="text" id="outro-descricao" name="outro-descricao" placeholder=" ">
+                        <label for="outro-descricao">Especifique o tipo de evento</label>
+                    </div>
+                </div>
+                
+                <!-- Número de Pessoas e Mensagem -->
+                <div class="form-row two-col">
+                    <div class="input-group">
+                        <input type="number" id="num-pessoas" name="num-pessoas" min="1" required placeholder=" ">
+                        <label for="num-pessoas">Nº Pessoas</label>
+                    </div>
+                    <div class="input-group message-group">
+                        <input type="text" id="mensagem" name="mensagem" placeholder=" ">
+                        <label for="mensagem">Mensagem</label>
+                    </div>
+                </div>
+                
+                <!-- Data -->
+                <div class="form-row">
+                    <div class="input-group date-group">
+                        <input type="date" id="data" name="data" required>
+                    </div>
+                </div>
+                
+                <!-- Nome -->
+                <div class="form-row">
+                    <div class="input-group contact-group">
+                        <input type="text" id="nome" name="nome" required placeholder=" ">
+                        <label for="nome">Nome</label>
+                    </div>
+                </div>
+                
+                <!-- Email -->
+                <div class="form-row">
+                    <div class="input-group contact-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">E-mail</label>
+                    </div>
+                </div>
+                
+                <!-- Telemóvel e Botão -->
+                <div class="form-row submit-row">
+                    <div class="input-group contact-group">
+                        <input type="tel" id="telemovel" name="telemovel" required placeholder=" ">
+                        <label for="telemovel">Telemóvel</label>
+                    </div>
+                    <button type="submit" class="submit-btn">ENVIAR</button>
+                </div>
+                
+                <!-- Privacy Notice -->
+                <p class="privacy-notice">Ao submeter concorda com a nossa Política de Privacidade</p>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
