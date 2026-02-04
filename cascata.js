@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const outroInput = document.getElementById('outro-descricao');
     const form = document.getElementById('reserva-form');
 
-    // Handle Tipo de Serviço change
+    // Handle Tipo de Serviço change - show local field for "catering"
     tipoServicoRadios.forEach(radio => {
         radio.addEventListener('change', (e) => {
             if (e.target.value === 'catering') {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Handle Tipo de Evento change
+    // Handle Tipo de Evento change - show "outro" field for "outro"
     tipoEventoRadios.forEach(radio => {
         radio.addEventListener('change', (e) => {
             if (e.target.value === 'outro') {
